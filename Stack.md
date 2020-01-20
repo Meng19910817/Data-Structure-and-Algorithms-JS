@@ -3,13 +3,13 @@ Recently I learned Data Structure and Algorithms with CoderWhy on Bilibili and h
 # Personal Introduction:
 ​    Hi, Friends. If you are new here, my name is Dejun Zhang, I have been working as a Java Developer for almost 3 years. 
 
-​    A year ago, I quited the office and started to think about my life. During the years, my job responsibility was to code business logic in the traditional coding industry. 
+​    A year ago, I quitted the office and started to think about my life. During the years, my job responsibility was to code business logic in the traditional coding industry. 
 
 ​    NOW, I am trying to improve both my programming skills and English.
 
-​    I know you have read lots of articles of Data Structure and Algorithms in Chinese, now, you have the differrent one! 
+​    I know you have read lots of articles of Data Structure and Algorithms in Chinese, now, you have the different one! 
 
-​    If I had anything wrong with coding, interpretation and English, please tell me or comment under the blow, let me know. If you like this article, please give me a "thumb up" and subscribe to  me!
+​    If I had anything wrong with coding, interpretation and English, please tell me or comment under the blow, let me know.Thanks a lot! If you like this article, please give me a "thumb up" and subscribe to  me!
 
 ## WHY I coded Data Structure with JavaScript NOT Java?
 
@@ -25,9 +25,7 @@ Recently I learned Data Structure and Algorithms with CoderWhy on Bilibili and h
 
 ## First In Last Out(FILO)
 
-<img src="/Users/zoumengyu/Library/Application Support/typora-user-images/image-20200119202049213.png" alt="image-20200119202049213" style="zoom:50%;" />
-
-<img src="/Users/zoumengyu/Library/Application Support/typora-user-images/image-20200119202122048.png" alt="image-20200119202122048" style="zoom:50%;" />
+![Stack](../master/images/Stack.png)
 
 We can implement Stack with data structure, Array. Here it is:
 
