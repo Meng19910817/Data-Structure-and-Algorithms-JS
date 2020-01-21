@@ -25,11 +25,7 @@ Recently I learned Data Structure and Algorithms with CoderWhy on Bilibili and h
 
 ## First In Last Out(FILO)
 
-<<<<<<< HEAD
-
-=======
 ![Stack](../master/images/Stack.png)
->>>>>>> d4160caf0ee843ed7b2c1048334183ac863b7454
 
 We can implement Stack with data structure, Array. Here it is:
 
