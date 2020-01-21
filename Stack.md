@@ -25,9 +25,7 @@ Recently I learned Data Structure and Algorithms with CoderWhy on Bilibili and h
 
 ## First In Last Out(FILO)
 
-<img src="/Users/zoumengyu/Library/Application Support/typora-user-images/image-20200119202049213.png" alt="image-20200119202049213" style="zoom:50%;" />
 
-<img src="/Users/zoumengyu/Library/Application Support/typora-user-images/image-20200119202122048.png" alt="image-20200119202122048" style="zoom:50%;" />
 
 We can implement Stack with data structure, Array. Here it is:
 
