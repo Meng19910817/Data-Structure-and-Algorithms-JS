@@ -4,7 +4,7 @@ Array
 
 2. It's more complex to **insert** or **delete** elements in a Array,  we need to change each element' index after inserting an element in the special position(not at the beginning or ending).
 
-   ![Array][../master/images/Array.png]
+   ![Array](../master/images/Array.png)
 
 
 
@@ -14,7 +14,7 @@ Node
 
 2. It's more complex to **read** elements from a ListNode due to the structure, we need to read from the head, each element connected with **next**.
 
-   ![LinkedNode][../master/images/linkedNode.png]
+   ![LinkedNode](../master/images/linkedNode.png)
 
    ```html
    <!DOCTYPE html>
