@@ -14,7 +14,7 @@ Node
 
 2. It's more complex to **read** elements from a ListNode due to the structure, we need to read from the head, each element connected with **next**.
 
-   ![LinkedNode](../master/images/linkedNode.png)
+   ![LinkedNode](../master/images/LinkedNode.png)
 
    ```html
    <!DOCTYPE html>
