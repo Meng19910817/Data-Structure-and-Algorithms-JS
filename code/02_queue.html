@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //1. creating a class called Queue
+     function Queue(){
+         //Initing the array
+        this.items = []
+        //the method for putting element into Queue
+        Queue.prototype.enQueue = function(element){
+            this.items.push(element)
+        }
+        //the method for delete the first put element, this is different from Stack
+        Queue.prototype.deQueue = function(){
+            this.items.shift()
+        }
+        //Return the first element of array
+        Queue.prototype.front = function(){
+            return this.items[0]
+        }
+        //Juding array is empty or not
+        Queue.prototype.isEmpty = function(){
+            return this.items.length == 0
+        }
+        //Return the numbers of elements
+        Queue.prototype.size = function(){
+            return this.items.length
+        }
+     }
+
+    //2. Testing
+    var queue = new Queue()
+    queue.enQueue("Amy") 
+    queue.enQueue("Bob") 
+    queue.enQueue("Chris")
+    console.log(queue)
+
+    queue.deQueue()
+    console.log(queue)
+
+    
+    console.log(queue.front())
+    console.log(queue.isEmpty())
+    console.log(queue.size())
+
+
+    </script>
+</body>
+</html>
