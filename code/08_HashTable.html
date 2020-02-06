@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function HashTable(){
+            this.storage = []
+            //the size of stored elements
+            this.count = 0
+            //the size of array
+            this.limit = 0
+
+            HashTable.prototype.HashFuc =  function(str, size){
+                var hashCode = 0
+                for(var i = 0; i < str.length; i++){
+                    hashCode = 37 * hashCode + str.charCodeAt(i)
+                }
+
+                var index = hashCode % size
+                return index
+            }
+            //insert & update
+            HashTable.prototype.put = function(key, value){
+                //1.transfer key to hashcode to find index
+                var index = this.HashFuc(key, this.limit)
+
+                //2.check the data of index
+                var bucket = this.storage[index]
+                if (bucket == null){
+                    bucket = []
+                    this.storage[index] = bucket
+                }
+
+                //update
+                for (var i = 0; i < bucket.length; i ++){
+                    var tuple = bucket[i]
+                    if (tuple[0] == key){
+                        tuple[1] = value
+                        return 
+                    }
+                }
+                //insert
+                bucket.push([key, value])
+                this.count += 1
+
+                if (this.count > this.limit * 0.75){
+                    this.resize(this.limit * 2)
+                }
+            }
+
+            HashTable.prototype.get = function(key){
+                var index = this.HashFuc(key, this.limit)
+                var bucket = this.storage[index]
+                if (bucket == null) return null
+                for(var i = 0; i < bucket.length; i++){
+                    var tuple = bucket[i]
+                    if (tuple[0] == key){
+                        return tuple[1]
+                    }
+                }
+                return null
+            }
+
+            HashTable.prototype.remove = function(key){
+                var index = this.HashFuc(key)
+                var bucket = this.storage[index]
+                if (bucket == null){
+                    return null
+                }
+                for(var i = 0; i < bucket.length; i++){
+                    var tuple = bucket[i]
+                    if (tuple[0] == key){
+                        bucket.splice(i, 1)
+                        this.count -= 1
+                        return tuple[1]
+                    }
+                }
+                return null
+            }
+
+            HashTable.prototype.isEmpty = function(){
+                return this.count == 0
+            }
+
+            HashTable.prototype.size = function(){
+                return this.count
+            }
+
+            HashTable.prototype.resize = function(newLimit){
+                var oldStorage = this.storage
+
+                this.storage = []
+                this.count = 0
+                this.limit = 0
+
+                for(var i = 0; i < oldStorage.length; i++){
+                    var bucket = oldStorage[i]
+                    if (bucket == null){
+                        continue
+                    }
+                    for(var j = 0; j < bucket.length; j++){
+                        var tuple = bucket[j]
+                        this.put(tuple[0], tuple[1])
+                    }
+                }
+            }
+        }
+
+        //Test
+         var hashtable = new HashTable()
+
+         hashtable.put("aaa", "111")
+         hashtable.put("bbb", "222")
+         hashtable.put("ccc", "333")
+         hashtable.put("ddd", "444")
+
+         alert(hashtable.get("aaa"))
+
+         hashtable.put("aaa", "666")
+         alert(hashtable.get("aaa"))
+
+         hashtable.remove("aaa")
+         alert(hashtable.get("aaa"))
+    </script>
+</body>
+</html>
